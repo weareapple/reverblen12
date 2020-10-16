@@ -5,26 +5,15 @@ public final class Assasin extends Ultimate {
     private String name;
     private int age;
 
-    public Assasin(String name, int age, Weapon weapon, String ultimate, int Health){
-        super(name, age, weapon, ultimate);
-        this.Health =Health;
+    public Assasin(String name, int age, Weapon weapon, String ultimate, int Health,Def def){
+        super(name, age,weapon, ultimate, new Def("fr12uu", "qwssae"));
+        this.Health = Health;
         this.name = name;
         this.age = age;
+
     }
 
-    public int getHealth() {
-        return Health;
-    }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public int getAge() {
-        return age;
-    }
     public void makeTotem(String totemName, int health) {
         for (int i = 0; i < health ; i++) {
             System.out.println(totemName);
